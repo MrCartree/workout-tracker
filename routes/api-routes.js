@@ -29,4 +29,14 @@ router.get("/api/workouts", ({ body }, res ) => {
     //     });
 });
 
+router.put("/api/workouts/:id", (req, res) => {
+    console.log(req.body);
+})
+
+
+router.post("/api/workouts", (req, res) => {
+    console.log(req.body);
+    res.json(req);
+});
+
 module.exports = router;
