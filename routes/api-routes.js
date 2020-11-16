@@ -39,11 +39,9 @@ router.post("/api/workouts", (req, res) => {
         });
 });
 
-router.get("api/workout/range", (req, res) => {
+router.get("/api/workouts/range", (req, res) => {
     var d = new Date();
-    console.log(d);
     d.setDate(d.getDate() - 7)
-    console.log(d);
     Workout.find({ day: { "$gte": d } }, (error, data) => {
         if (error) {
             res.send(error);
